@@ -10,13 +10,24 @@ angular.module('wechat', ['ionic', 'wechat.controllers', 'wechat.routes',
 .config(['$ionicConfigProvider', function($ionicConfigProvider) {
 
     $ionicConfigProvider.tabs.position('bottom'); // other values: top
+    console.log(Date().toString());
 
 }])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $http, localStorageService, dateService) {
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
+
+        if (localStorage.getItem("messages") === null) {
+
+            $http.get("../data/json/messages.json").then(function(response) {
+                localStorageService.update("messages", response.data.messages);
+
+            });
+        }
+        console.log(dateService.getNowDate());
+
         if (window.cordova && window.cordova.plugins.Keyboard) {
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
         }

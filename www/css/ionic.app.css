@@ -15,6 +15,32 @@ $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
+.rj-push-right {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #8c8c8c;
+  font-size: 13px; }
+
+.item .rj-list-p {
+  font-size: 13px;
+  color: #6a6a6a; }
+
+.item.my-popup {
+  padding: 15px;
+  padding-left: 20px; }
+
+.popup-head {
+  padding: 0 !important;
+  border-bottom: none !important; }
+
+.popup-body {
+  padding: 0px !important;
+  overflow: hidden !important; }
+
+.scroll-bar-indicator {
+  display: none; }
+
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -4334,9 +4360,9 @@ a.subdued {
   justify-content: center;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  border-color: #b2b2b2;
+  border-color: #E8E8E8;
   background-color: #f8f8f8;
-  background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
+  background-image: linear-gradient(0deg, #E8E8E8, #E8E8E8 50%, transparent 50%);
   color: #444;
   position: absolute;
   bottom: 0;
@@ -4352,10 +4378,8 @@ a.subdued {
     color: #f8f8f8; }
   @media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .tabs {
-      padding-top: 1px;
-      /*    border-top: none !important;
-  add border-top
-*/
+      padding-top: 2px;
+      border-top: none !important;
       border-bottom: none;
       background-position: top;
       background-size: 100% 1px;
@@ -4464,6 +4488,7 @@ a.subdued {
 .tabs-striped .tabs {
   background-color: white;
   background-image: none;
+  border: none;
   border-bottom: 1px solid #ddd;
   padding-top: 0; }
 
@@ -5034,7 +5059,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
   top: 44px;
   padding-top: 0;
   background-position: bottom;
-  border-top-width: 1px;
+  border-top-width: 0;
   border-bottom-width: 1px; }
   .tabs-top > .tabs .tab-item.tab-item-active .badge, .tabs-top > .tabs .tab-item.active .badge, .tabs-top > .tabs .tab-item.activated .badge,
   .tabs.tabs-top .tab-item.tab-item-active .badge,
@@ -5502,7 +5527,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both; }
   .popup-container .popup {
-    width: 250px;
+    width: 85%;
     max-width: 100%;
     max-height: 90%;
     border-radius: 0px;
@@ -5634,14 +5659,14 @@ ion-tabs.tabs-color-active-dark .tab-item {
  * --------------------------------------------------
  */
 .item {
-  border-color: #ddd;
+  border-color: #E8E8E8;
   background-color: #fff;
   color: #444;
   position: relative;
   z-index: 2;
   display: block;
   margin: -1px;
-  padding: 16px;
+  padding: 10px;
   border-width: 1px;
   border-style: solid;
   font-size: 16px; }
@@ -5678,12 +5703,12 @@ ion-tabs.tabs-color-active-dark .tab-item {
     display: -ms-flexbox;
     display: flex;
     position: absolute;
-    top: 16px;
-    right: 32px; }
+    top: 10px;
+    right: 20px; }
   .item.item-button-right .badge {
-    right: 67px; }
+    right: 55px; }
   .item.item-divider .badge {
-    top: 8px; }
+    top: 5px; }
   .item .badge + .badge {
     margin-right: 5px; }
   .item.item-light {
@@ -5854,7 +5879,7 @@ button.item.item-complex {
 .item-radio .item-content {
   position: relative;
   z-index: 2;
-  padding: 16px 49px 16px 16px;
+  padding: 10px 29px 10px 10px;
   border: none;
   background-color: #fff; }
 
@@ -6000,24 +6025,24 @@ a.item-content {
   font-size: 28px; }
 
 .item-icon-left {
-  padding-left: 54px; }
+  padding-left: 34px; }
   .item-icon-left .icon {
-    left: 11px; }
+    left: 7px; }
 
 .item-complex.item-icon-left {
   padding-left: 0; }
   .item-complex.item-icon-left .item-content {
-    padding-left: 54px; }
+    padding-left: 34px; }
 
 .item-icon-right {
-  padding-right: 54px; }
+  padding-right: 34px; }
   .item-icon-right .icon {
-    right: 11px; }
+    right: 7px; }
 
 .item-complex.item-icon-right {
   padding-right: 0; }
   .item-complex.item-icon-right .item-content {
-    padding-right: 54px; }
+    padding-right: 34px; }
 
 .item-icon-left.item-icon-right .icon:first-child {
   right: auto; }
@@ -6032,10 +6057,10 @@ a.item-content {
   font-size: 16px; }
 
 .item-icon-left .icon-accessory {
-  left: 3px; }
+  left: 2px; }
 
 .item-icon-right .icon-accessory {
-  right: 3px; }
+  right: 2px; }
 
 /**
  * Item Button
@@ -6043,7 +6068,7 @@ a.item-content {
  * An item button is a child button inside an .item (not the entire .item)
  */
 .item-button-left {
-  padding-left: 72px; }
+  padding-left: 45px; }
 
 .item-button-left > .button,
 .item-button-left .item-content > .button {
@@ -6059,8 +6084,8 @@ a.item-content {
   -moz-align-items: center;
   align-items: center;
   position: absolute;
-  top: 8px;
-  left: 11px;
+  top: 5px;
+  left: 7px;
   min-width: 34px;
   min-height: 34px;
   font-size: 18px;
@@ -6081,7 +6106,7 @@ a.item-content {
 .item-button-right,
 a.item.item-button-right,
 button.item.item-button-right {
-  padding-right: 80px; }
+  padding-right: 50px; }
 
 .item-button-right > .button,
 .item-button-right .item-content > .button,
@@ -6099,8 +6124,8 @@ button.item.item-button-right {
   -moz-align-items: center;
   align-items: center;
   position: absolute;
-  top: 8px;
-  right: 16px;
+  top: 5px;
+  right: 10px;
   min-width: 34px;
   min-height: 34px;
   font-size: 18px;
@@ -6127,8 +6152,8 @@ button.item.item-button-right {
 .item-avatar .item-content,
 .item-avatar-left,
 .item-avatar-left .item-content {
-  padding-left: 72px;
-  min-height: 72px; }
+  padding-left: 60px;
+  min-height: 60px; }
   .item-avatar > img:first-child,
   .item-avatar .item-image,
   .item-avatar .item-content > img:first-child,
@@ -6138,35 +6163,35 @@ button.item.item-button-right {
   .item-avatar-left .item-content > img:first-child,
   .item-avatar-left .item-content .item-image {
     position: absolute;
-    top: 16px;
-    left: 16px;
+    top: 10px;
+    left: 10px;
     max-width: 40px;
     max-height: 40px;
     width: 100%;
     height: 100%;
-    border-radius: 50%; }
+    border-radius: 0; }
 
 .item-avatar-right,
 .item-avatar-right .item-content {
-  padding-right: 72px;
-  min-height: 72px; }
+  padding-right: 60px;
+  min-height: 60px; }
   .item-avatar-right > img:first-child,
   .item-avatar-right .item-image,
   .item-avatar-right .item-content > img:first-child,
   .item-avatar-right .item-content .item-image {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 10px;
+    right: 10px;
     max-width: 40px;
     max-height: 40px;
     width: 100%;
     height: 100%;
-    border-radius: 50%; }
+    border-radius: 0; }
 
 .item-thumbnail-left,
 .item-thumbnail-left .item-content {
-  padding-top: 8px;
-  padding-left: 106px;
+  padding-top: 5px;
+  padding-left: 100px;
   min-height: 100px; }
   .item-thumbnail-left > img:first-child,
   .item-thumbnail-left .item-image,
@@ -6188,8 +6213,8 @@ button.item.item-button-right {
 
 .item-thumbnail-right,
 .item-thumbnail-right .item-content {
-  padding-top: 8px;
-  padding-right: 106px;
+  padding-top: 5px;
+  padding-right: 100px;
   min-height: 100px; }
   .item-thumbnail-right > img:first-child,
   .item-thumbnail-right .item-image,
@@ -6217,16 +6242,16 @@ button.item.item-button-right {
 
 .item-body {
   overflow: auto;
-  padding: 16px;
+  padding: 10px;
   text-overflow: inherit;
   white-space: normal; }
   .item-body h1, .item-body h2, .item-body h3, .item-body h4, .item-body h5, .item-body h6, .item-body p {
-    margin-top: 16px;
-    margin-bottom: 16px; }
+    margin-top: 10px;
+    margin-bottom: 10px; }
 
 .item-divider {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   min-height: 30px;
   background-color: #f5f5f5;
   color: #222;
@@ -6851,7 +6876,7 @@ legend {
   margin-bottom: 1.42857;
   padding: 0;
   width: 100%;
-  border: 1px solid #ddd;
+  border: 1px solid #E8E8E8;
   color: #444;
   font-size: 21px;
   line-height: 2.85714; }
@@ -6948,7 +6973,7 @@ textarea {
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 10.66667px; }
+  padding: 6.66667px; }
 
 .item-input-wrapper {
   display: -webkit-box;
@@ -6981,7 +7006,7 @@ textarea {
   line-height: 18px; }
 
 .item-input-wrapper ~ .button {
-  margin-left: 10.66667px; }
+  margin-left: 6.66667px; }
 
 .input-label {
   display: table;
@@ -7350,21 +7375,21 @@ input:checked + .checkbox-icon:after {
   opacity: 1; }
 
 .item-checkbox {
-  padding-left: 60px; }
+  padding-left: 48px; }
   .item-checkbox.active {
     box-shadow: none; }
 
 .item-checkbox .checkbox {
   position: absolute;
   top: 50%;
-  right: 8px;
-  left: 8px;
+  right: 5px;
+  left: 5px;
   z-index: 3;
   margin-top: -21px; }
 
 .item-checkbox.item-checkbox-right {
-  padding-right: 60px;
-  padding-left: 16px; }
+  padding-right: 48px;
+  padding-left: 10px; }
 
 .item-checkbox-right .checkbox input,
 .item-checkbox-right .checkbox-icon {
@@ -7485,15 +7510,15 @@ input:checked + .checkbox-icon:after {
 
 .item-toggle,
 .item-toggle.item-complex .item-content {
-  padding-right: 99px; }
+  padding-right: 81px; }
 
 .item-toggle.item-complex {
   padding-right: 0; }
 
 .item-toggle .toggle {
   position: absolute;
-  top: 10px;
-  right: 16px;
+  top: 7px;
+  right: 10px;
   z-index: 3; }
 
 .toggle input:disabled + .track {
@@ -7588,7 +7613,7 @@ input:checked + .checkbox-icon:after {
 
 .item-radio .item-content {
   /* give some room to the right for the checkmark icon */
-  padding-right: 64px; }
+  padding-right: 40px; }
 
 .item-radio .radio-icon {
   /* checkmark icon will be hidden by default */
@@ -7597,7 +7622,7 @@ input:checked + .checkbox-icon:after {
   right: 0;
   z-index: 3;
   visibility: hidden;
-  padding: 14px;
+  padding: 8px;
   height: 100%;
   font-size: 24px; }
 
@@ -7788,7 +7813,7 @@ input:checked + .checkbox-icon:after {
     top: 0;
     bottom: 0;
     right: 0;
-    padding: 0 48px 0 16px;
+    padding: 0 30px 0 10px;
     max-width: 65%;
     border: none;
     background: #fff;
@@ -7806,7 +7831,7 @@ input:checked + .checkbox-icon:after {
   .item-select:after {
     position: absolute;
     top: 50%;
-    right: 16px;
+    right: 10px;
     margin-top: -3px;
     width: 0;
     height: 0;

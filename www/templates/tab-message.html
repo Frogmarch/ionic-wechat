@@ -1,5 +1,12 @@
 <ion-view>
     <ion-content on-swipe-left="onSwipeLeft()">
-        <h1>消息页面</h1>
+    	<ion-list rj-close-back-drop>
+    	  <ion-item class="item-avatar" on-hold="popupMessageOpthins()" rj-hold-active ng-repeat="message in messages">
+	  	      <img ng-src="{{message.pic}}">
+	  	      <h2 ng-bind="message.name"></h2>
+	  	      <p class="rj-list-p" ng-bind="message.lastMessage.content"></p>
+	  	      <span class="rj-push-right" ng-bind="message.lastMessage.time"></span>
+    	  </ion-item>
+    	</ion-list>
     </ion-content>
 </ion-view>

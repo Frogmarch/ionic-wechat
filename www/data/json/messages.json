@@ -1,0 +1,27 @@
+{
+    "messages": [{
+        "name": "李明",
+        "pic": "img/adam.jpg",
+        "lastMessage": {
+            "time": "2015-10-12 15:34:55",
+            "content": "你在干什么?",
+            "isFromeMe": "false"
+        }
+    }, {
+        "name": "王峰",
+        "pic": "img/ben.png",
+        "lastMessage": {
+            "time": "2015-10-12 15:34:55",
+            "content": "明天什么时候去吃饭?",
+            "isFromeMe": "false"
+        }
+    }, {
+        "name": "潘敏",
+        "pic": "img/max.png",
+        "lastMessage": {
+            "time": "2015-10-12 15:34:55",
+            "content": "我就在软件园?",
+            "isFromeMe": "false"
+        }
+    }]
+}
