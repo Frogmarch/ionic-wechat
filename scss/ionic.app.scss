@@ -17,48 +17,63 @@ $dark:                            #444 !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
-
-$tabs-striped-border-width:	0;
+$tabs-striped-border-width: 0;
 $item-padding: 10px;
-.rj-push-right{
-	position: absolute;
-	right: $item-padding;
-	top: $item-padding;
-	color: #8c8c8c;
-	font-size: 13px;
+.rj-push-right {
+    position: absolute;
+    right: $item-padding;
+    top: $item-padding;
+    color: #8c8c8c;
+    font-size: 13px;
 }
+
 $item-avatar-border-radius: 0;
-.item{	
-	.rj-list-p{
-		font-size: 13px;
-		color: #6a6a6a;
-	}
+.item {
+    .rj-list-p {
+        font-size: 13px;
+        color: #6a6a6a;
+    }
 }
-.item.my-popup{
-	padding: ($item-padding+5px);
-	padding-left: $item-padding * 2;
+
+.item.my-popup {
+    padding: ($item-padding+5px);
+    padding-left: $item-padding * 2;
 }
 
 $item-default-border: #E8E8E8;
 $tabs-default-border: $item-default-border;
-
 .popup-head {
-  padding: 0 !important;
-  border-bottom: none !important;
+    padding: 0 !important;
+    border-bottom: none !important;
 }
 
 .popup-body {
-  padding: 0px !important;
-  overflow: hidden !important;
+    padding: 0px !important;
+    overflow: hidden !important;
 }
 
 $popup-width: 85%;
+.scroll-bar-indicator {
+    display: none;
+}
 
-.scroll-bar-indicator
-{
-	display: none;
+.item > .rj-sm-red-icon {
+    position: absolute;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #FF0000;
+    line-height: 18px;
+    text-align: center;
+    top: 5px;
+    left: 40px;
+}
+
+.item > .rj-sm-red-icon > p {
+    color: #FFF;
+    font-size: 12px;
 }
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
-
