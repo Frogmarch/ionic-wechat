@@ -1,27 +1,58 @@
 {
     "messages": [{
+    	"id": 0,
         "name": "李明",
         "pic": "img/adam.jpg",
         "lastMessage": {
             "time": "2015-10-12 15:34:55",
             "content": "你在干什么?",
-            "isFromeMe": "false"
-        }
+            "isFromeMe": false
+        },
+        "noReadMessages": 2,
+        "showHints": true
     }, {
+    	"id": 1,
         "name": "王峰",
         "pic": "img/ben.png",
         "lastMessage": {
             "time": "2015-10-12 15:34:55",
             "content": "明天什么时候去吃饭?",
-            "isFromeMe": "false"
-        }
+            "isFromeMe": false
+        },
+        "noReadMessages": 5,
+        "showHints": true
     }, {
+    	"id": 2,
         "name": "潘敏",
         "pic": "img/max.png",
         "lastMessage": {
             "time": "2015-10-12 15:34:55",
             "content": "我就在软件园?",
-            "isFromeMe": "false"
-        }
+            "isFromeMe": false
+        },
+        "noReadMessages": 0,
+        "showHints": false
+    }, {
+    	"id": 3,
+        "name": "王振启",
+        "pic": "img/mike.png",
+        "lastMessage": {
+            "time": "2015-10-12 15:34:55",
+            "content": "周末有什么安排?",
+            "isFromeMe": false
+        },
+        "noReadMessages": 20,
+        "showHints": true
+    }, {
+    	"id": 4,
+        "name": "许仁杰",
+        "pic": "img/perry.png",
+        "lastMessage": {
+            "time": "2015-10-12 15:34:55",
+            "content": "好",
+            "isFromeMe": false
+        },
+        "noReadMessages": 0,
+        "showHints": false
     }]
 }

@@ -41,6 +41,22 @@ $dark:                            #444 !default;
 .scroll-bar-indicator {
   display: none; }
 
+.item > .rj-sm-red-icon {
+  position: absolute;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #FF0000;
+  line-height: 18px;
+  text-align: center;
+  top: 5px;
+  left: 40px; }
+
+.item > .rj-sm-red-icon > p {
+  color: #FFF;
+  font-size: 12px; }
+
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/

@@ -14,18 +14,25 @@ angular.module('wechat', ['ionic', 'wechat.controllers', 'wechat.routes',
 
 }])
 
-.run(function($ionicPlatform, $http, localStorageService, dateService) {
+.run(function($ionicPlatform, $http, messageService, dateService) {
+
+    var url = "";
+    if (ionic.Platform.isAndroid()) {
+        url = "/android_asset/www/";
+    }
+
+    // if (localStorage.getItem("messageID") === null) {
+
+        $http.get(url + "data/json/messages.json").then(function(response) {
+            // localStorageService.update("messages", response.data.messages);
+            messageService.init(response.data.messages);
+
+        });
+    // }
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
 
-        if (localStorage.getItem("messages") === null) {
-
-            $http.get("../data/json/messages.json").then(function(response) {
-                localStorageService.update("messages", response.data.messages);
-
-            });
-        }
         console.log(dateService.getNowDate());
 
         if (window.cordova && window.cordova.plugins.Keyboard) {

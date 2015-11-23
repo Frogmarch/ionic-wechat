@@ -1,8 +1,9 @@
 <ion-view>
     <ion-content on-swipe-left="onSwipeLeft()">
     	<ion-list rj-close-back-drop>
-    	  <ion-item class="item-avatar" on-hold="popupMessageOpthins()" rj-hold-active ng-repeat="message in messages">
+    	  <ion-item class="item-avatar" on-hold="popupMessageOpthins($index)" rj-hold-active ng-repeat="message in messages">
 	  	      <img ng-src="{{message.pic}}">
+            <span class="rj-sm-red-icon" ng-show="message.showHints"><p ng-bind="message.noReadMessages"></p></span>
 	  	      <h2 ng-bind="message.name"></h2>
 	  	      <p class="rj-list-p" ng-bind="message.lastMessage.content"></p>
 	  	      <span class="rj-push-right" ng-bind="message.lastMessage.time"></span>
