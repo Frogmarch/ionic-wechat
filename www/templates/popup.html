@@ -4,8 +4,8 @@
         <h2 ng-show="messages[popup.index].showHints">标为已读</h2>
     </ion-item>
     <ion-item class="my-popup" ng-click="topMessage()">
-        <h2>置顶聊天</h2>
-        <h2 ng-show="false">取消置顶</h2>
+        <h2 ng-hide="messages[popup.index].isTop">置顶聊天</h2>
+        <h2 ng-show="messages[popup.index].isTop">取消置顶</h2>
     </ion-item>
     <ion-item class="my-popup" ng-click="deleteMessage()">
         <h2>删除该聊天</h2>

@@ -17,6 +17,11 @@ angular.module('wechat.routes', [])
                 }
             }
         })
+        .state('messageDetail', {
+            url: '/messageDetail/:messageId',
+            templateUrl: "templates/message-detail.html",
+            controller: "messageDetailCtrl"
+        })
         .state('tab.friends', {
             url: '/friends',
             views: {

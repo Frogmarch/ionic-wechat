@@ -33,4 +33,22 @@ angular.module('wechat.directives', [])
                 });
             }
         };
+    }])
+    .directive('resizeFootBar', [function(){
+        // Runs during compile
+        return {
+            replace: false,
+            link: function(scope, iElm, iAttrs, controller) {
+                scope.$on("taResize", function(e, ta) {
+                    if (!ta) return;
+
+                    var taHeight = ta[0].offsetHeight;
+                    var newFooterHeight = taHeight + 10;
+                    newFooterHeight = (newFooterHeight > 44) ? newFooterHeight : 44;
+
+                    iElm[0].style.height = newFooterHeight + 'px';
+
+                })
+            }
+        };
     }]);
