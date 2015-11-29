@@ -1,0 +1,49 @@
+<ion-header-bar align-title="left" class="bar-dark">
+    <div class="buttons">
+        <button class="button button-icon icon ion-arrow-left-c" ui-sref="tab.message">
+        </button>
+    </div>
+    <!-- <div class="h1 title" ng-bind="message.name">微信</div> -->
+    <div class="h1 title" ng-bind="message.name"></div>
+    <div class="buttons">
+        <button class="button button-icon icon ion-person"></button>
+    </div>
+</ion-header-bar>
+<ion-content class="rj-stable-content" delegate-handle="messageDetailsScroll">
+	<ion-refresher pulling-text="..." on-refresh="doRefresh()" pulling-icon=""></ion-refresher>
+    <div ng-repeat="item in messageDetils">
+    	<p class="rj-message-time" ng-bind="item.time" ng-if="false"></p>
+        <div class="rj-message-wrap" ng-if="!item.isFromeMe">
+            <img ng-src="{{message.pic}}" class="rj-head-pic">
+            <span class="rj-triangle-left"></span>
+            <p class="rj-message" ng-bind="item.content"></p>
+        </div>
+        <div class="rj-message-wrap" ng-if="item.isFromeMe">
+            <img src="img/me.png" class="rj-head-pic-right">
+            <span class="rj-triangle-right"></span>
+            <p class="rj-message-right" ng-bind="item.content"></p>
+        </div>
+    </div>
+</ion-content>
+<ion-footer-bar align-title="left" class="bar-light" resize-foot-bar>
+    <!-- <div class="buttons rj-footer-buttons-left">
+        <button class="button button-icon icon ion-ios-mic-outline">
+        </button>
+    </div> -->
+    <div class="rj-footer-btn-wrap">
+        <button class="button button-icon icon ion-ios-mic-outline rj-footer-btn-left">
+        </button>
+    </div>
+    <label class="item item-input rj-footer-input">
+        <textarea msd-elastic ng-model="foo"></textarea>
+        <div class="buttons">
+            <button class="rj-footer-btn button button-icon icon ion-happy-outline"></button>
+        </div>
+    </label>
+    <div class="rj-footer-btn-wrap">
+        <div class="buttons">
+            <button class="button button-icon icon ion-ios-plus-outline rj-footer-btn-left">
+            </button>
+        </div>
+    </div>
+</ion-footer-bar>

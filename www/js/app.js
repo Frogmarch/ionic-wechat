@@ -4,13 +4,12 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 angular.module('wechat', ['ionic', 'wechat.controllers', 'wechat.routes',
-    'wechat.services', 'wechat.directives'
+    'wechat.services', 'wechat.directives', 'monospaced.elastic'
 ])
 
 .config(['$ionicConfigProvider', function($ionicConfigProvider) {
 
     $ionicConfigProvider.tabs.position('bottom'); // other values: top
-    console.log(Date().toString());
 
 }])
 
@@ -33,7 +32,6 @@ angular.module('wechat', ['ionic', 'wechat.controllers', 'wechat.routes',
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
 
-        console.log(dateService.getNowDate());
 
         if (window.cordova && window.cordova.plugins.Keyboard) {
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);

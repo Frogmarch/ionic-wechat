@@ -15,12 +15,12 @@ angular.module('wechat.controllers', [])
         index: 0
     };
     $scope.messages = messageService.getAllMessages();
-    console.log($scope.messages);
+    // console.log($scope.messages);
     $scope.onSwipeLeft = function() {
         $state.go("tab.friends");
     };
-    $scope.popupMessageOpthins = function($index) {
-        $scope.popup.index = $index;
+    $scope.popupMessageOpthins = function(message) {
+        $scope.popup.index = $scope.messages.indexOf(message);
         $scope.popup.optionsPopup = $ionicPopup.show({
             templateUrl: "templates/popup.html",
             scope: $scope,
@@ -28,19 +28,45 @@ angular.module('wechat.controllers', [])
         $scope.popup.isPopup = true;
     };
     $scope.markMessage = function() {
-    	var index = $scope.popup.index;
-    	var message = $scope.messages[index];
-    	if (message.showHints) {
-    		message.showHints = false;
-    		message.noReadMessages = 0;
-    	}else{
-    		message.showHints = true;
-    		message.noReadMessages = 1;
-    	}
+        var index = $scope.popup.index;
+        var message = $scope.messages[index];
+        if (message.showHints) {
+            message.showHints = false;
+            message.noReadMessages = 0;
+        } else {
+            message.showHints = true;
+            message.noReadMessages = 1;
+        }
         $scope.popup.optionsPopup.close();
         $scope.popup.isPopup = false;
         messageService.updateMessage(message);
     };
+    $scope.deleteMessage = function() {
+        var index = $scope.popup.index;
+        var message = $scope.messages[index];
+        $scope.messages.splice(index, 1);
+        $scope.popup.optionsPopup.close();
+        $scope.popup.isPopup = false;
+        messageService.deleteMessageId(message.id);
+        messageService.clearMessage(message);
+    };
+    $scope.topMessage = function() {
+        var index = $scope.popup.index;
+        var message = $scope.messages[index];
+        if (message.isTop) {
+            message.isTop = 0;
+        } else {
+            message.isTop = new Date().getTime();
+        }
+        $scope.popup.optionsPopup.close();
+        $scope.popup.isPopup = false;
+        messageService.updateMessage(message);
+    };
+    $scope.messageDetils = function(message) {
+        $state.go("messageDetail", {
+            "messageId": message.id
+        });
+    }
 
 })
 
@@ -58,3 +84,22 @@ angular.module('wechat.controllers', [])
         $state.go("tab.find");
     };
 })
+
+.controller('messageDetailCtrl', ['$scope', '$stateParams',
+    'messageService', '$ionicScrollDelegate', '$timeout',
+    function($scope, $stateParams, messageService, $ionicScrollDelegate, $timeout) {
+        $scope.message = messageService.getMessageById($stateParams.messageId);
+        $scope.messageDetils = $scope.message.message;
+        var viewScroll = $ionicScrollDelegate.$getByHandle('messageDetailsScroll');
+
+        $scope.doRefresh = function() {
+            console.log("ok");
+        }
+
+        $scope.$on("$ionicView.beforeEnter", function(){
+            $timeout(function(){
+                viewScroll.scrollBottom();
+            }, 0);
+        });
+    }
+])
