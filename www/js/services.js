@@ -184,6 +184,19 @@ angular.module('wechat.services', [])
                 getMessageById: function(id){
                     return localStorageService.get("message_" + id);
                 },
+                getAmountMessageById: function(num, id){
+                    var messages = [];
+                    var message = localStorageService.get("message_" + id).message;
+                    var length = 0;
+                    if(num < 0 || !message) return;
+                    length = message.length;
+                    if(num < length){
+                        messages = message.splice(length - num, length); 
+                        return messages;  
+                    }else{
+                        return message;
+                    }
+                },
                 updateMessage: function(message) {
                     var id = 0;
                     if (message) {

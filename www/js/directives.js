@@ -47,7 +47,6 @@ angular.module('wechat.directives', [])
                     newFooterHeight = (newFooterHeight > 44) ? newFooterHeight : 44;
 
                     iElm[0].style.height = newFooterHeight + 'px';
-
                 })
             }
         };
