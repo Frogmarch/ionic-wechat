@@ -154,6 +154,17 @@ $dark:                            #444 !default;
   margin-left: auto;
   margin-right: auto; }
 
+.rj-footer-btn-wrap .rj-send-button {
+  background-color: #1BBB37;
+  color: #FFF;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  position: absolute;
+  bottom: 3px;
+  width: 38px;
+  left: 4px; }
+
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/

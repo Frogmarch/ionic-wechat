@@ -194,5 +194,19 @@ $popup-width: 85%;
     margin-left: auto;
     margin-right: auto;
 }
+
+.rj-footer-btn-wrap .rj-send-button{
+    background-color: #1BBB37;
+    color: #FFF;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    position: absolute;
+    bottom: 3px;
+    width: 38px;
+    left: 4px;
+
+}
+
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";

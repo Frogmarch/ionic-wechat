@@ -71,7 +71,7 @@ angular.module('wechat.controllers', [])
             isPopup: false,
             index: 0
         };
-    })
+    });
 
 })
 
@@ -116,6 +116,10 @@ angular.module('wechat.controllers', [])
             $timeout(function() {
                 viewScroll.scrollBottom();
             }, 0);
+        });
+
+        window.addEventListener("native.keyboardshow", function(e){
+            viewScroll.scrollBottom();
         });
     }
 ])
