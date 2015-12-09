@@ -165,6 +165,92 @@ $dark:                            #444 !default;
   width: 38px;
   left: 4px; }
 
+.rj-list .list {
+  width: 90%;
+  margin-left: 10px;
+  margin-right: auto;
+  margin-top: -1px; }
+
+.rj-list .list .rj-item {
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  padding-left: 0;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+
+.rj-contacts-item {
+  padding: 0px !important; }
+
+.rj-item .rj-contacts-pic {
+  color: white;
+  height: 36px;
+  width: 36px;
+  line-height: 36px;
+  float: left;
+  font-size: 28px;
+  text-align: center; }
+
+.rj-orange-bgc {
+  background-color: orange; }
+
+.rj-green-bgc {
+  background-color: #63db2a; }
+
+.rj-blue-bgc {
+  background-color: #2d31ca; }
+
+.rj-item h2 {
+  padding-left: 10px;
+  position: absolute;
+  margin: auto !important;
+  top: 0;
+  bottom: 0;
+  left: 36px;
+  height: 32px;
+  line-height: 32px; }
+
+.rj-contacts-pic img {
+  width: 36px;
+  height: 36px; }
+
+.rj-contacts-index-bar {
+  background-color: #E8E8E8;
+  padding-left: 10px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 80%;
+  color: #545454; }
+
+.rj-contacts-right-bar {
+  position: fixed;
+  right: 0;
+  top: 44px;
+  width: 20px;
+  height: 100%;
+  z-index: 2;
+  text-align: center;
+  font-size: 80%;
+  color: #545454; }
+
+.rj-contacts-right-bar div {
+  height: 16px; }
+
+.rj-contacts-middle-bar {
+  position: fixed;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #FFF;
+  font-size: 300%;
+  background-color: rgba(0, 0, 0, 0.5); }
+
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
