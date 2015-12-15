@@ -27,6 +27,9 @@ angular.module('wechat', ['ionic', 'wechat.controllers', 'wechat.routes',
             messageService.init(response.data.messages);
 
         });
+        $http.get(url + "data/json/friends.json").then(function(response){
+            console.log(response.data.results);
+        });
     // }
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -40,4 +43,4 @@ angular.module('wechat', ['ionic', 'wechat.controllers', 'wechat.routes',
             StatusBar.styleDefault();
         }
     });
-})
+});

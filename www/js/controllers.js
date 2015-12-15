@@ -82,6 +82,9 @@ angular.module('wechat.controllers', [])
     $scope.onSwipeRight = function() {
         $state.go("tab.message");
     };
+    $scope.contacts_right_bar_swipe = function(e){
+        console.log(e);
+    };
 })
 
 .controller('settingCtrl', function($scope, $state) {
